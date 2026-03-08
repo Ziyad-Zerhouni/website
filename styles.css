@@ -155,13 +155,32 @@ html, body {
 }
 
 
+.middle-div .introduction h2 {
+    text-align: center;
+}
 
+.middle-div .introduction {
+    width: 300px;
+    margin-bottom: 30px;
+    font-size: large;
+    background-color:rgb(207, 229, 255);
+    
+
+}
+.middle-div .introduction p{
+    margin-left: 5px;
+    
+}
+
+.date {
+    font-size: medium;
+    text-align: right;
+    margin-right: 5px;
+}
 
 .middle-div .learning {
     width: 300px;
     margin-bottom: 30px;
-
-
     background-color:rgb(207, 229, 255);
 }
 
@@ -271,24 +290,6 @@ html, body {
     width: 100%;
     z-index: 1;
 }
-
-/*
-.footer {
-    background-color: #007BFF;
-    padding: 5px;
-    width: 100%;
-    text-align: center;
-    margin-left: 3px;
-    margin-right: 3px;
-    border-radius: 25px;
-    padding-top: 0px;
-    min-height: auto;
-}
-.footer p {
-    font-style: oblique;
-    font-size: 120%;
-}
-*/
 
 .lower-div .photo a img {
     width: 20px;
