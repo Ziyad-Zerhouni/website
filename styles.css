@@ -155,18 +155,48 @@ html, body {
 }
 
 
-.middle-div .introduction h2 {
-    text-align: center;
+.middle-div .introduction .hi-and-button {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    
+    
 }
 
-.middle-div .introduction {
+
+.middle-div .introduction .hi-and-button button {
+    position: absolute;
+    transform: translateX(180%);
+    background-color:#007BFF;
+    border-color: transparent;
+    
+    
+}
+
+.middle-div .introduction .hi-and-button h2 {
+    text-align: center;
+    
+}
+
+.middle-div .introduction  {
     width: 300px;
     margin-bottom: 30px;
     font-size: large;
     background-color:rgb(207, 229, 255);
-    
-
 }
+
+.middle-div .introduction .intro-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.middle-div .introduction .intro-body.open {
+    max-height: 1000px;
+}
+
 .middle-div .introduction p{
     margin-left: 5px;
     
@@ -184,11 +214,12 @@ html, body {
     background-color:rgb(207, 229, 255);
 }
 
+
 .middle-div .learning h2 {
     text-align: center;
 }
 
-.middle-div .learning .main p {
+.middle-div .learning .main{
     margin-left: 5px;
     font-size: large;
 }

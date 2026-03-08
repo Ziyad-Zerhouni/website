@@ -1,6 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const button = document.querySelector(".search-button");
     const input = document.querySelector(".search-bar");
+    const btn = document.querySelector(".toggle");
+    const box = document.querySelector(".intro-body");
+
+    btn.addEventListener("click", () => {
+        box.classList.toggle("open");
+    });
 
     function performSearch() {
         const query = input.value.trim();
@@ -150,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 clearInterval(deleteInterval);
                 updatePlaceholder();
             }
-        }, 30); // Adjust speed of deletion
+        }, 30);
     }
 
     updatePlaceholder();
