@@ -3,9 +3,15 @@ document.addEventListener("DOMContentLoaded", () => {
     const input = document.querySelector(".search-bar");
     const btn = document.querySelector(".toggle");
     const box = document.querySelector(".intro-body");
+    let currentPlaceholderQuery = "";
 
     btn.addEventListener("click", () => {
         box.classList.toggle("open");
+        if (box.classList.contains("open")) {
+            btn.textContent = "Shrink";
+        } else {
+            btn.textContent = "Expand";
+        }
     });
 
     function performSearch() {
@@ -15,7 +21,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (query) {
             searchDuckDuckGo(query);
         } else {
-            searchDuckDuckGo(input.id);
+            searchDuckDuckGo(currentPlaceholderQuery);
         }
     }
 
@@ -99,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ];
 
     let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-        "Jul", "Sep", "Oct", "Nov", "Dec"
+        "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"
     ]
 
     let years = Array.from({ length: 24 }, (_, index) => 2000 + index);
@@ -129,7 +135,10 @@ document.addEventListener("DOMContentLoaded", () => {
             randomElement += " " + codingLanguages[LanguageIndex] + " " + adjectives[AdjectivesIndex] + "?";
         }
 
-        input.id = randomElement;
+        
+        currentPlaceholderQuery = randomElement;
+
+        //input.id = randomElement;
         // Animate showing the placeholder
         let i = 0;
         let interval = setInterval(() => {
