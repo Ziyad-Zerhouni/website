@@ -13,7 +13,9 @@ html, body {
     
 }
 
-.top-div {
+/* title area */
+
+.top-header {
     display: flex;
     flex-direction: column;
     position: relative;
@@ -41,20 +43,16 @@ html, body {
     display: flex;
     flex-direction: row;
     position: relative;
-}
-
-.top-div .title-container .title-div {
-    display: flex;
     color: rgb(231, 236, 244);
     letter-spacing: 0px;
     margin: 0;
 }
 
-.top-div .title-container .title-div .title {
+.title {
     font-size: 380%;
 }
 
-.title-div .fun {
+.fun {
     display: flex;
     position: absolute;
     font-family: 'MinecraftFont';
@@ -76,7 +74,7 @@ html, body {
     }
 }
 
-.top-div .under-title {
+.under-title {
     position: relative;
     display: flex;
     justify-content: center;
@@ -85,7 +83,7 @@ html, body {
     bottom: 15px;
 }
 
-.top-div .under-title a.nav-link {
+.nav-link {
     border-width: 0;
     background-color: darkblue;
     color: rgb(231, 236, 244);
@@ -99,10 +97,13 @@ html, body {
     text-decoration: none;
 }
 
-.top-div .under-title a.nav-link:hover {
+.nav-link:hover {
     color: green;
 }
-.middle-div {
+
+/*  Main section of the website  */
+
+.website-body {
     background-color: aliceblue;
     padding-bottom: 25%;
     padding-top: 1%;
@@ -114,14 +115,14 @@ html, body {
     position: relative;
     z-index: 0;
 }
-.middle-div .search-div {
+.search-div {
     margin-top: 5px;
     margin-bottom: 30px;
     height: 50px;
     width: 360px;
     display: flex;
 }
-.middle-div .search-div .search-bar {
+.search-bar {
     width: 300px;
     padding: 10px;
     border: 2px solid #ccc;
@@ -130,13 +131,13 @@ html, body {
     outline: none;
     transition: border-color 0.3s;
 }
-.middle-div .search-div .search-bar:focus {
+.search-bar:focus {
     border-color: #007BFF;
 }
-.middle-div .search-div .search-bar::placeholder {
+.search-bar::placeholder {
     color: #888;
 }
-.middle-div .search-div .search-button {
+.search-button {
     border: 2px solid #ccc;
     border-radius: 50%;
     width: 50px;
@@ -149,24 +150,28 @@ html, body {
     margin-left: 5px;
     overflow: hidden;
 }
-.middle-div .search-div .search-button img {
+
+.search-button img {
     width: 70%;
     height: auto;
 }
 
+.blue-card {
+    width: 300px;
+    margin-bottom: 30px;
+    background-color:rgb(207, 229, 255);
+    font-size: large;
+}
 
-.middle-div .introduction .hi-and-button {
+.hi-and-button {
     position: relative;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    
-    
 }
 
-
-.middle-div .introduction .hi-and-button button {
+.hi-and-button button {
     position: absolute;
     transform: translateX(180%);
     background-color:#007BFF;
@@ -175,31 +180,24 @@ html, body {
     
 }
 
-.middle-div .introduction .hi-and-button h2 {
+.blue-card-title {
     text-align: center;
-    
 }
 
-.middle-div .introduction  {
-    width: 300px;
-    margin-bottom: 30px;
+.blue-card-text {
+    margin-left: 5px;
     font-size: large;
-    background-color:rgb(207, 229, 255);
+     
 }
 
-.middle-div .introduction .intro-body {
+.intro-body {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
 }
 
-.middle-div .introduction .intro-body.open {
-    max-height: 1000px;
-}
-
-.middle-div .introduction p{
-    margin-left: 5px;
-    
+.intro-body.open {
+    max-height: 1200px;
 }
 
 .date {
@@ -208,22 +206,8 @@ html, body {
     margin-right: 5px;
 }
 
-.middle-div .learning {
-    width: 300px;
-    margin-bottom: 30px;
-    background-color:rgb(207, 229, 255);
-}
 
-
-.middle-div .learning h2 {
-    text-align: center;
-}
-
-.middle-div .learning .main{
-    margin-left: 5px;
-    font-size: large;
-}
-
+/* end of the main body of the website, little fun loading thingy */
 
 .rotate-divs-container {
     position: relative;
@@ -233,7 +217,7 @@ html, body {
     width: 220px;
     height: 220px;
 }
-.middle-div .base-rect-div{
+.base-rect-div{
     width: 10px;
     height: 10px;
     border-radius: 50%;
@@ -295,7 +279,7 @@ html, body {
 }
 @keyframes move-div-4 {
     0% {
-        left: 85.36%px;
+        left: 85.36%;
         top: 14.64%;
    }
     100% {
@@ -304,9 +288,9 @@ html, body {
    }
 }
 
+/* fixed lower area, it is a long dark blue div with a fixed position on the screen, it has socials, maybe I'll add other things later*/
 
-
-.lower-div {
+.lower-bar {
     background-color: rgb(0, 0, 75);
     color: white;
     padding-left: 5px;
@@ -322,12 +306,12 @@ html, body {
     z-index: 1;
 }
 
-.lower-div .photo a img {
+.photo img {
     width: 20px;
     height: auto;
 
 }
 
-.lower-div .X a {
+.lower-bar .X a {
     margin-left: 20px;
 }
